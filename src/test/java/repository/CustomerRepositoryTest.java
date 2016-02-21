@@ -23,18 +23,18 @@ public class CustomerRepositoryTest {
 
     @Test
     public void testNonNullCustomerRepository() throws Exception {
-        Assert.assertNotNull(customerRepository);
+        Assert.assertNotNull(this.customerRepository);
     }
 
     @Test
     public void testFindAllCustomers() throws Exception {
-        Iterable<Customer> customers = customerRepository.findAll();
+        Iterable<Customer> customers = this.customerRepository.findAll();
         Assert.assertNotNull(customers.iterator().next());
     }
 
     @Test
     public void testFindCustomerByFirstName() throws Exception {
-        List<Customer> customers = customerRepository.findByFirstName("Tarik");
-//        Assert.assertEquals("Tarik", customer.getFirstName());
+        List<Customer> customers = this.customerRepository.findByFirstName("Tarik");
+//        Assert.assertThat(customers,notNullVa);
     }
 }
