@@ -1,11 +1,13 @@
-# customer-service
+# Rest service using spring-boot
 
-### spring-boot learning project 
+## starter-kit for rest service using spring boot
 
-* includes spring-boot jpa
-* spring-boot rest
+### include
+ - db : MYSQL
 
-#### hot to run
+
+#### How to run
+
 * update database configuration in src/main/resources/application.properties
 * seed the mysql database with etc/data/customers.sql
 * to build the project : mvn clean package -DskipTests

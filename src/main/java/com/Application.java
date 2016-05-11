@@ -1,10 +1,9 @@
-package main;
+package com;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
@@ -12,14 +11,13 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  */
 
 @SpringBootApplication
-@EntityScan(basePackages = {"model"})
-@EnableJpaRepositories(basePackages = {"repository"})
+@EnableJpaRepositories(basePackages = {"com.repository"})
 public class Application {
 
-    private static final Logger logger= LoggerFactory.getLogger(Application.class);
+    private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
-        logger.debug("CustomerService started with args [{}]",args);
-        SpringApplication.run(Application.class,args);
+        logger.debug("CustomerService started with args [{}]", args);
+        SpringApplication.run(Application.class, args);
     }
 }
